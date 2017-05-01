@@ -1,0 +1,12 @@
+---
+service:
+- docker
+
+before_install:
+- make docker-pull
+
+script:
+- make test
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
